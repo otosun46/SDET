@@ -1,0 +1,21 @@
+/*
+         İnterview Sorusu :  Implicit ve Explicit
+
+         Implicit : Bütün elemanlar için kullanılır.bir kere tanımlanır.
+         Explicit : Tek bir eleman özel Kriter olarak tanımlanır sadece ilgili elemanda geçerli olur
+                   ExpectedConditions
+                                     .titleIs -> title bu olana kadar bekle
+                                     .titleContains -> title ın da bu kelime geçene kadar bekle
+                                     .visibilityOfTheElement -> eleman gözükene kadar bekle
+                                     .elementToBeClickable -> eleman tıklanabilir olana kadra bekle
+                                     .elementToBeSelected -> eleman seçilebilir olana kadra bekle
+                                     .alertIsPresent()  -> alert çıkana kadar bekle.
+                                     .textToBe -> elemanda verilen txt gözükene kadar bekle.
+                                     .InvisibilityOfTheElement -> eleman kaybolana kadar bekle
+
+         Her ikisi tanımlı ise : önce Implicit kullanılır, ve üzerine Explicit in süresi eklenerek
+                                  toplam hata sınır süresi ortaya çıkmış olur.
+ */
+Ornegin;
+https://the-internet.herokuapp.com/dynamic_controls
+invisibilityOfElementLocated

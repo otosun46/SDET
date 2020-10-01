@@ -1,0 +1,70 @@
+    Niçin CSS selectors
+id ve name den sonra Kolaydır.(easy)
+id ve name den sonra en hızlısıdır.(faster)
+id ve name den sonra Tarayıcılar diline en uygun olanıdır.(native)
+Web yazılımcıları elemanlarda özellikleri her zaman kullanılır. Bu yüzden kullanışlıdır.
+
+    # -> id için
+By.cssSelector("#logout"); // id si logout olan
+By.cssSelector("a#logout");  // a tag lılar için de id si logout olan
+
+    .    ->    class için
+By.cssSelector(".center"); // class=‘’center’’
+By.cssSelector("p.center");  // p tag lılar için de class i center olan
+
+    Tag name ile arama
+By.cssSelector("input"); // bütün input taglı olanları seçer.
+By.cssSelector("input[type=‘text’]");  //bütün inputlarda type=‘’text’’ olanları seçer
+By.cssSelector("input[type=‘text’][placeholder=‘First Name’]") // bütün inputlar içinden type=‘’text’’ ve placeholder=‘’First Name’’ olanı bulur.
+By.cssSelector("[type=‘text’]");  //type=‘’text’’ olanları seçer
+By.cssSelector("input.form-control[type=‘text’]");  //bütün inputlarda class=‘form-control’ olanlardan type=‘text’ olanlar seçer
+
+    Startwith, endingwith, containing ile arama
+* -> İçinde geçen
+^ -> ile başlayan
+$ -> ile biten
+
+    + ile bitişik(kardeş) elemanı bulma
+By.cssSelector("img + h1"); //  öncesinde img tag ı olan h1 tag li elemanı bulur
+By.cssSelector("h1 + p");   //  öncesinde h1 tag ı olan p  taglı elemanı  bulur
+
+    ~ ile bitişik(kardeş) elemanı bulma
+By.cssSelector("h1 ~ img);  //  öncesinde h1 tag ı olan img tag li elemanı bulur
+By.cssSelector("img ~ img); //  öncesinde img tag ı olan img  taglı elemanı  bulur
+
+    > ile child elemanı bulma
+By.cssSelector(#profile>img);
+
+    Space  ile child elemanı bulma
+By.cssSelector(#profile img);
+
+    : not
+By.cssSelector("input:not(.required)"); // İnput lardan class ı required OLMAYANLAR
+By.cssSelector("input:not([type=email])"); // İnput lardan type ı email OLMAYANLAR
+
+    : nth-child          :first-child
+By.cssSelector("#profile>*:nth-chld(2)");
+By.cssSelector("#profile>p:nth-chld(5)");
+By.cssSelector("#profile>img:nth-chld(1)");
+
+    : nth-last-child       :last-child
+By.cssSelector("#profile>*:nth-last-chld(2)");
+By.cssSelector("#profile>p:nth-last-chld(5)");
+By.cssSelector("#profile>img:nth-last-chld(1)");
+
+    : nth-of-type           :nth-last-of-type
+By.cssSelector("#profile>img:nth-of-type(1)");
+By.cssSelector("#profile>p:nth-of-type(2)");
+
+By.cssSelector("#profile>p:first-of-type");
+By.cssSelector("#profile>p:last-of-type");
+
+    : disable
+By.cssSelector("input:disabled");
+
+    : checked
+By.cssSelector("input:checked");
+By.cssSelector("input:not(:checked)");
+
+    Locator in java & chrome console
+

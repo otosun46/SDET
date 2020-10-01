@@ -1,0 +1,20 @@
+u_1_2
+u_2_2
+u_3_2
+u_4_2
+u_6_2
+
+u_ başlıyor
+_2 bitiyor
+
+a[id^='u_'][id$='_2']
+
+CSS de
+^ -> ile başlayan
+$ -> ile biten
+* -> içinde geçen
+
+Xpath
+[starts-with(@id,'u_')] -> ile başlayan
+[end-with(@id,'_2')]    -> ile biten
+[contains(@id,'u_')]    -> içinde geçen

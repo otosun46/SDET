@@ -1,0 +1,60 @@
+Basic format of Relative XPath
+Xpath=//tagname[@Attribute='Value']
+
+    Basic XPath
+Xpath=//input[@type='text']
+Xpath=//label[@id='message23']
+Xpath=//input[@value='RESET']
+Xpath=//*[@class='barone']
+Xpath=//a[@href='http://demo.guru99.com/']
+Xpath= //img[@src='//cdn.guru99.com/images/home/java.png']
+
+    Contains():
+Xpath=//*[contains(@type,'sub')]
+Xpath=//*[contains(@name,'btn')]
+Xpath=//*[contains(@id,'message')]
+Xpath=//*[contains(@href,'guru99.com’)]
+Xpath=//h2[contains(text(),'Popular right now')]
+
+    Starts-with function
+Xpath=//label[starts-with(@id,'message')]
+
+    Ends-with function
+Xpath=//label[ends-with(@id,'message')]
+
+    Using OR & AND
+Xpath=//*[@type='submit' or @name='btnReset']
+Xpath=//input[@type='submit' and @name='btnLogin’]
+Xpath =//span[@role='menuitem' or @class='text-gray-darker’]
+Or = || in java
+And = && in java
+Xpath =//a[@id='item_0_title_link' or @href='./inventory-item.html?id=0']
+
+    Text()
+Xpath=//*[text()='First Name']
+
+    Following
+Xpath=//*[@type='text']//following::input
+
+    Preceding
+Xpath=//*[@type='submit']//preceding::input
+
+    By Index []
+Xpath=//*[@type='text']//following::input[1]
+
+    Ancestor
+Xpath=//*[text()='Enterprise Testing']//ancestor::div
+//div[text()='Sauce Labs Backpack']//ancestor::div
+
+    Child
+Xpath=//*[@id='java_technologies']//child::li
+Xpath=//div[@class='cart_list']//a
+
+    Following-sibling (siblings on same level)
+xpath=//*[@type='submit']//following-sibling::input
+
+    Preceding-sibling
+
+    .. going up one level
+xpath=//*[@type='submit']/../span
+Xpath=//*[text()='ADD TO CART']/parent::div
